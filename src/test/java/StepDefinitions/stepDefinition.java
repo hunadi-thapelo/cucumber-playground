@@ -9,17 +9,18 @@ public class stepDefinition {
     public void User_is_on_risk_input_home_page() {
         System.out.println("User is on the login page");
     }
-    @When("User logins in with valid username and password")
-    public void user_logins_in_with_valid_username_and_password() {
-        System.out.println("User enters valid login details");
+    @When("User logins in with valid {string} and {string}")
+    public void user_logins_in_with_valid_and(String string, String string2) {
+        System.out.println(string);
+        System.out.println(string2);
     }
     @Then("User is logged in successfully")
     public void user_is_logged_in_successfully() {
         System.out.println("User is logged in");
     }
-    @Then("User domain name is displayed")
-    public void user_domain_name_is_displayed() {
-        System.out.println("User domain name is visible!");
+    @Then("User domain name displayed {string}")
+    public void user_domain_name_displayed(String string) {
+        System.out.println("Domain name is displayed is "+string);
     }
 }
 

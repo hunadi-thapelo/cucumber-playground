@@ -1,8 +1,11 @@
 package StepDefinitions;
 
+import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+
+import java.util.List;
 
 public class stepDefinition {
     @Given("User is on Risk Input home page")
@@ -21,6 +24,15 @@ public class stepDefinition {
     @Then("User domain name displayed {string}")
     public void user_domain_name_displayed(String string) {
         System.out.println("Domain name is displayed is "+string);
+    }
+    @When("User signs up with valid details")
+    public void user_signs_up_with_valid_details(DataTable dataTable)//DataTable type parameter for multiple data we're working with
+    {
+        List<List<String>> credList = dataTable.asLists();
+        System.out.println(credList.get(0).get(0));//1st get represents row (in example we're working with one row), 2nd get is column number
+        System.out.println(credList.get(0).get(1));
+        System.out.println(credList.get(0).get(2));
+        System.out.println(credList.get(0).get(3));
     }
 }
 

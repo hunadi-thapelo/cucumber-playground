@@ -39,5 +39,18 @@ public class stepDefinition {
         System.out.println("User logs into account with "+string+ " and "+string2+" !");
     }
 
+    @Given("user opens Chrome browser")
+    public void user_opens_chrome_browser() {
+        System.out.println("User opens browser successfully");
+    }
+    @When("user enters valid Risk Input url")
+    public void user_enters_valid_risk_input_url() {
+        System.out.println("URL link points to correct server");
+    }
+    @Then("Risk Input opens successfully")
+    public void risk_input_opens_successfully() {
+        System.out.println("Risk Input loads successfully");
+    }
+
 }
 

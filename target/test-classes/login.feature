@@ -1,5 +1,10 @@
 Feature: Application login
 
+ Background:
+   Given user opens Chrome browser
+   When user enters valid Risk Input url
+   Then Risk Input opens successfully
+
 @RegressionTests
   Scenario: Home page login
     Given User is on Risk Input home page
@@ -19,7 +24,7 @@ Feature: Application login
     | sophy | marlboro | s.malboro@email.com | smP@word |
     Then User is logged in successfully
     Then User domain name displayed "true"
-@SmokeTests
+@SanityTests
   Scenario Outline: Home page login
     Given User is on Risk Input home page
     When User logs into account with valid "<userName>" and "<passWord>"

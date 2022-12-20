@@ -5,7 +5,7 @@ package cucumberOptions;
 
 @CucumberOptions(
         features = "src/test/resources",
-        glue = "StepDefinitions", tags = "@RegressionTests and @SmokeTests" //package name
+        glue = "StepDefinitions", tags = "@RegressionTests" //package name
 )
 public class TestRunner extends AbstractTestNGCucumberTests {
 }
